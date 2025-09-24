@@ -10,3 +10,55 @@ print(f"GPA:{current_gpa}")
 print(f"Study hours: {study_hours}")
 print(f"Social points: {social_points}")
 print(f"Stress level: {stress_level}")
+print()
+print("Choose your course load:")
+print("A) Light (12 credits)")  
+print("B) Standard (15 credits)")
+print("C) Heavy (18 credits)")
+
+choice = input("Your choice: ")
+
+if choice == "A": #light load
+    if current_gpa >= 3.5:
+        study_hours = 3
+        stress_level = 15
+        print(f"You're doing well with a light load and might want to move to a medium load")
+    elif  current_gpa >= 2.5:
+        study_hours = 5
+        stress_level = 40
+        print(f"You're doing okay and it's reccomennded you should study{study_hours}+ hours a week")
+    else:
+        study_hours = 7
+        stress_level = 75
+        print(f"You need to lock in gang, I reccommend you study {10}+ hours a week")
+        
+
+if choice == "B": #Medium load
+    if current_gpa >= 3.5:
+        study_hours = 5
+        stress_level = 25
+        print(f"You're doing well with a medium load and might want to move to a heavy load")
+    elif  current_gpa >= 2.5:
+        study_hours = 8
+        stress_level = 50
+        print(f"You're doing okay and it's reccomennded you should study{study_hours}+ hours a week")
+    else:
+        study_hours = 10
+        stress_level = 85
+        print(f"You need to lock in gang, I reccommend you study {study_hours}+ hours a week")
+
+if choice == "C": #Heavy load
+    if current_gpa >= 3.5:
+        study_hours = 5
+        stress_level = 25
+        print(f"You're doing well with a heavyload, You're goated gangalanche!")
+    elif  current_gpa >= 2.5:
+        study_hours = 9
+        stress_level = 50
+        print(f"You're doing okay and it's reccomennded you should study{study_hours}+ hours a week")
+    else:
+        study_hours = 12
+        stress_level = 85
+        print(f"You need to lock in gang, I reccommend you study {study_hours}+ hours a week")
+else:
+    print("Invalid Input")
