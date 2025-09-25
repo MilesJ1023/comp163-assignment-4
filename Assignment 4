@@ -26,14 +26,14 @@ if choice == "A": #light load
     elif  current_gpa >= 2.5:
         study_hours = 5
         stress_level = 40
-        print(f"You're doing okay and it's reccomennded you should study{study_hours}+ hours a week")
+        print(f"You're doing okay and it's reccomennded you should study {study_hours}+ hours a week")
     else:
         study_hours = 7
         stress_level = 75
         print(f"You need to lock in gang, I reccommend you study {10}+ hours a week")
         
 
-if choice == "B": #Medium load
+elif choice == "B": #Medium load
     if current_gpa >= 3.5:
         study_hours = 5
         stress_level = 25
@@ -41,13 +41,13 @@ if choice == "B": #Medium load
     elif  current_gpa >= 2.5:
         study_hours = 8
         stress_level = 50
-        print(f"You're doing okay and it's reccomennded you should study{study_hours}+ hours a week")
+        print(f"You're doing okay and it's reccomennded you should study {study_hours}+ hours a week")
     else:
         study_hours = 10
         stress_level = 85
         print(f"You need to lock in gang, I reccommend you study {study_hours}+ hours a week")
 
-if choice == "C": #Heavy load
+elif choice == "C": #Heavy load
     if current_gpa >= 3.5:
         study_hours = 5
         stress_level = 25
@@ -62,3 +62,15 @@ if choice == "C": #Heavy load
         print(f"You need to lock in gang, I reccommend you study {study_hours}+ hours a week")
 else:
     print("Invalid Input")
+print()
+study_options = ["Programming", "Math", "English", "History"]
+user_choice = input("What do you want to study?? ")
+if user_choice not in study_options:
+    print("Invalid Choice")
+elif user_choice in study_options:
+    print(f"Okay you chose {user_choice}! The more you study the better your grade! ")
+print()
+if social_points<= 50 and current_gpa <= 3.5:
+    print("A study group is reccomennded, Learn those soft skills and get better!")
+elif current_gpa>= 3.5 or social_points>= 50:
+    print("According to your stats, \nyou may not need a study group, \nbut one can be beneficial and help you network!")
