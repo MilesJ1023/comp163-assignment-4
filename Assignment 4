@@ -1,4 +1,4 @@
-student_name = "Miles Johnson"
+student_name = "Miles Johnson" #Initial Stats
 current_gpa = 3.8
 study_hours = 5
 social_points = 65
@@ -17,7 +17,7 @@ print("B) Standard (15 credits)")
 print("C) Heavy (18 credits)")
 
 choice = input("Your choice: ")
-
+#Choice Options
 if choice == "A": #light load
     if current_gpa >= 3.5:
         study_hours = 3
@@ -74,3 +74,42 @@ if social_points<= 50 and current_gpa <= 3.5:
     print("A study group is reccomennded, Learn those soft skills and get better!")
 elif current_gpa>= 3.5 or social_points>= 50:
     print("According to your stats, \nyou may not need a study group, \nbut one can be beneficial and help you network!")
+print()
+study_plan = input("Do you have a study plan (Leave blank if not) ")
+if study_plan != "" :
+    print("You're a good student keep grinding!")
+    if current_gpa <= 2.5:
+        print("You made need revision to your plan")
+else:
+    print("I know you love AI lil dude. Use it to create personalized a study plan for you.")
+
+semester_outcome =""
+
+if current_gpa >= 3.5 and study_plan != "":
+     semester_outcome = "You're him brodigy! Keep studying hard and you will succeed this semester"
+elif current_gpa >= 3.5 and study_plan == "":
+    semester_outcome = "You're making it work. Stay locked and create a study plan and you'll succeed"
+elif current_gpa >= 2.5 and study_plan != "":
+    semester_outcome = "The more you study the more your GPA will go up. You'll get there"
+elif current_gpa >= 2.5 and study_plan == "":
+    semester_outcome = "You need to get that study plan together or you're cooked gang. But I know you'll lock in"
+elif current_gpa <2.0 and study_plan != "":
+    semester_outcome = "You're cooked right now so you have to study to succeed."
+elif current_gpa < 2.0 and study_plan == "":
+    semester_outcome = "You're fried I can't lie. I'm begging you study"   
+print()
+print(f"Semester Outcome = {semester_outcome}")
+x = None
+if x is not None:
+    print("")
+print()
+final_stats = {
+    "Student Name": student_name,
+    "Current GPA":current_gpa,
+    "Study Hours": study_hours,
+    "Social Points": social_points,
+    "Stress Level": stress_level,
+    "Study Plan": study_plan
+}
+print()
+print(f"Final Stats: {final_stats}")
