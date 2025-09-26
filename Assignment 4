@@ -63,7 +63,7 @@ elif choice == "C": #Heavy load
 else:
     print("Invalid Input")
 print()
-study_options = ["Programming", "Math", "English", "History"]
+study_options = ["Programming", "Math", "English", "History"] #Study options logic
 user_choice = input("What do you want to study?? ")
 if user_choice not in study_options:
     print("Invalid Choice")
@@ -82,7 +82,7 @@ if study_plan != "" :
         print("You made need revision to your plan")
 else:
     print("I know you love AI lil dude. Use it to create personalized a study plan for you.")
-
+#Semester outcome portion and different ending portion
 semester_outcome =""
 
 if current_gpa >= 3.5 and study_plan != "":
@@ -102,7 +102,7 @@ print(f"Semester Outcome = {semester_outcome}")
 x = None
 if x is not None:
     print("")
-print()
+print() #Final stats
 final_stats = {
     "Student Name": student_name,
     "Current GPA":current_gpa,
